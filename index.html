@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>شبیه‌ساز سنگ کاغذ قیچی</title>
+
+  <!-- استایل -->
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- Chart.js برای نمودار -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <header>
+    <div class="controls-box">
+      <div class="game-control">
+        <div>
+          <label for="element-count">تعداد هر عنصر:</label>
+          <input type="number" id="element-count" min="1" max="100" value="30">        
+        </div>
+        <!-- انتخاب عنصر -->
+         <div>
+          <label for="guess-select">حدس شما:</label>
+          <select id="guess-select" style="height: 25px;">
+            <option value="rock">سنگ 🪨</option>
+            <option value="paper">کاغذ 📄</option>
+            <option value="scissors">قیچی ✂️</option>
+          </select>
+         </div>
+
+        <!-- دکمه‌ها -->
+        <section class="controls">
+          <button id="start-btn">🎮 شروع بازی</button>
+          <button id="fast-mode">⏩ نگه دار برای سرعت بالا</button>
+        </section>
+
+              <!-- نمایش وضعیت بازی -->
+        <section class="status-panel">
+          <div>سنگ: <span id="rock-count">30</span></div>
+          <div>کاغذ: <span id="paper-count">30</span></div>
+          <div>قیچی: <span id="scissors-count">30</span></div>
+          <div>⏱ زمان: <span id="timer">00:00</span></div>
+        </section>
+      </div>
+      <hr>
+
+
+    </div>
+  </header>
+
+  <!-- محل اجرای بازی -->
+
+  <section style="display:flex; flex-direction:row; gap:10px">
+    <div id="game-wrapper">
+      <canvas id="game-canvas" width="800" height="500"></canvas>
+    </div>
+
+    <section class="game-board" style="margin-top: 20px;">        
+        <!-- نمودار روند -->
+      <section class="chart-section">
+        <canvas id="trendChart" style="height:200px"></canvas>
+      </section>
+   </section>
+
+  </section>
+
+  
+    <!-- Modal پایان بازی -->
+    <div class="result-modal">
+      <div id="result-modal">
+        <div class="modal-content">
+          <h2 id="game-result">نتیجه بازی</h2>
+          <p id="winner-info">برنده: عنصر X در مدت زمان Y</p>
+          <p id="user-status">شما برنده شدید! 🎉</p>
+          <button id="reset-btn">تأیید و شروع مجدد</button>
+        </div>
+      </div>
+    </div>
+
+
+  <!-- اسکریپت‌ها -->
+  <script src="fireworks.js"></script>
+  <script src="chart.js"></script>
+  <script src="app.js"></script>
+
+</body>
+</html>
