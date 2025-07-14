@@ -23,8 +23,8 @@ Fair warning though: this game is addictive!
 
 ## 📸 Sneak Peek
 
-_(Insert GIF or screenshot here that blows everyone's mind.)_
-
+Here’s a sneak peek of the battle in progress:  
+![Gameplay Snapshot](Screenshot.png "A glimpse of the epic Rock, Paper, Scissors war!")
 ---
 
 ## ⚠️ Warning: May cause laughter and compulsive rematches!
